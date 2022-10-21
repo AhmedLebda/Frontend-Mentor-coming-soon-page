@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&display=swap");
+
+:root {
+  --font-franklin: "Libre Franklin", sans-serif;
+
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+  --body-font-size: 20px;
+}
+
+/* Global Styles */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-franklin);
+  /* font-size: var(--body-font-size); */
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Page Styles */
+.content-wrapper {
+  width: 85%;
+  margin: 1rem auto;
+  text-align: center;
+}
+.logo {
+  max-width: 20%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.title {
+  font-size: 1.7rem;
+  color: var(--gray);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.title span {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+.sub-paragraph {
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+#email {
+  width: 100%;
+  padding: 0.7rem;
+  padding-left: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--blue);
+  outline: none;
+
+  color: var(--blue);
+  display: block;
+}
+#email.error {
+  border: 1px solid var(--light-red);
+  color: var(--light-red);
+}
+.error-message {
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 500;
+  color: hsl(354, 100%, 66%);
+}
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border: none;
+  outline: none;
+  background-color: var(--blue);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 8px var(--pale-blue);
+  cursor: pointer;
+}
+button:active {
+  background-color: hsl(223.1, 40.5%, 69%);
+}
+.dashboard-illustration {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto 2rem;
+}
+.links i {
+  color: var(--blue);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.copy {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+@media screen and (min-width: 800px) {
+  .content-wrapper {
+    width: 65%;
+  }
+  #email {
+    display: inline-block;
+    width: 65%;
+    margin-right: 4%;
+  }
+  form {
+    margin-bottom: 3rem;
+  }
+  button {
+    width: 30%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1040px) {
+  .content-wrapper {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1340px) {
+  .content-wrapper {
+    width: 35%;
+  }
+  #email {
+    width: 70%;
+  }
+  button {
+    width: 25%;
+  }
+}
